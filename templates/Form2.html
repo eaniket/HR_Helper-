@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png" />
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <title>HR HELPER</title>
+
+    <link rel="stylesheet" href="/static/css/form.css">
+</head>
+
+<body id="page-top">
+    <form class="container" id="form2" action = "{{ url_for('predict') }}" method = "POST">
+        <div class="col-md-8 mb-6">
+            Does mental health condition interfere with your work?<br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="intf" value="yes" checked>
+                <label class="form-check-label" for="intf">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="intf" value="no">
+                <label class="form-check-label" for="intf">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="intf" value="maybe">
+                <label class="form-check-label" for="intf">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-8 mb-6">
+            How often do you take WORK FROM HOME?<small>(days/week)</small>
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                <option selected value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <br>
+        <div class="col-md-8 mb-6">
+            Do you know the options for mental health care your employer provides? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="care_options" value="yes" checked>
+                <label class="form-check-label" for="care_options">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="care_options" value="no">
+                <label class="form-check-label" for="care_options">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="care_options" value="maybe">
+                <label class="form-check-label" for="care_options">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-8 mb-6">
+            Has your employer ever discussed mental health as part of an employee wellness program? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name=" wellness_program" value="yes" checked>
+                <label class="form-check-label" for=" wellness_program">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name=" wellness_program" value="no">
+                <label class="form-check-label" for=" wellness_program">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name=" wellness_program" value="maybe">
+                <label class="form-check-label" for=" wellness_program">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            Does your employer provide resources to learn more about mental health issues and how to seek help?<br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="seek_help" value="yes" checked>
+                <label class="form-check-label" for="seek_help">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="seek_help" value="no">
+                <label class="form-check-label" for="seek_help">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="seek_help" value="maybe">
+                <label class="form-check-label" for="seek_help">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <small>Click next to continue</small>
+        <div class="form-group row next">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-success"><a href="/form1" id="changeColor">Previous</a></button>
+                <button type="submit" class="btn btn-success"><a href="/form3" onclick="document.getElementById('form2').submit();" id="changeColor">Next</a></button>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

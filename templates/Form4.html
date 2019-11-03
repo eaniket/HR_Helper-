@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png" />
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <title>HR HELPER</title>
+
+    <link rel="stylesheet" href="/static/css/form.css">
+</head>
+
+<body id="page-top">
+    <form class="container" id="form4" action = "{{ url_for('predict') }}" method = "POST">
+        <br>
+        <div class="col-md-8 mb-6">
+            Would you bring up a mental health issue with a potential employer in an interview? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mental_health_interview" value="yes" checked>
+                <label class="form-check-label" for="mental_health_interview">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mental_health_interview" value="no">
+                <label class="form-check-label" for="mental_health_interview">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mental_health_interview" value="maybe">
+                <label class="form-check-label" for="mental_health_interview">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-8 mb-6">
+            Would you bring up a physical health issue with a potential employer in an interview?<br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="phys_health_interview" value="yes" checked>
+                <label class="form-check-label" for="phys_health_interview">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="phys_health_interview" value="no">
+                <label class="form-check-label" for="phys_health_interview">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="phys_health_interview" value="maybe">
+                <label class="form-check-label" for="phys_health_interview">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            Do you feel that your employer takes mental health as seriously as physical health? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mental_vs_physical" value="yes" checked>
+                <label class="form-check-label" for="mental_vs_physical">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mental_vs_physical" value="no">
+                <label class="form-check-label" for="mental_vs_physical">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mental_vs_physical" value="maybe">
+                <label class="form-check-label" for="mental_vs_physical">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            Have you heard of or observed negative consequences for coworkers with mental health conditions in your
+            workplace?<br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="obs_consequence" value="yes" checked>
+                <label class="form-check-label" for="obs_consequence">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="obs_consequence" value="no">
+                <label class="form-check-label" for="obs_consequence">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="obs_consequence" value="maybe">
+                <label class="form-check-label" for="obs_consequence">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Additional Comments:</label>
+            <textarea class="form-control col-md-4 mb-3" id="exampleFormControlTextarea1" rows="2"></textarea>
+        </div>
+        <br>
+        <div class="form-group row next">
+            <div class="col-sm-10">
+               <!-- <button type="submit" class="btn btn-success"><a href="/" onclick="document.getElementById('form4').submit(); id="changeColor"">Next</a></button> -->
+               <input type="submit" value="Predict" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

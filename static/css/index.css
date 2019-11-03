@@ -1,0 +1,33 @@
+header {
+    background: url(https://marketingland.com/wp-content/ml-loads/2014/08/writing-content-notes-ss-1920.jpg);
+    background-size: cover;
+    background-position: center; 
+    height: 700px;
+}
+
+.intro-heading{
+    padding-top: 5%;
+    padding-bottom: 15%;
+    text-align: center;
+    font-size: 500%;
+    color: black;
+}
+
+.buton{
+    padding-top: 1%;
+    text-align: center;
+    padding-bottom: 25%;
+}
+.social-buttons{
+    text-align: center;
+}
+
+
+#footer{
+    text-align: center;
+    background-color: #fff;
+    padding: 7% 10%;
+}
+.social-icon{
+    padding: 20px 10px;
+}

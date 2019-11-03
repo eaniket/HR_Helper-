@@ -1,0 +1,13 @@
+#page-top{
+   /*text-align: center;*/
+    padding: 5%;
+}
+
+.container{
+    background: plum;
+    border: 2px solid;
+}
+
+.next{
+    text-align: center;
+}

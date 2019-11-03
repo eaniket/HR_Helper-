@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="http://example.com/favicon.png" />
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <title>HR HELPER</title>
+
+    <link rel="stylesheet" href="/static/css/form.css">
+</head>
+
+<body id="page-top">
+    <form class="container" id ="form3" action = "{{ url_for('predict') }}" method = "POST">
+        <br>
+        <div class="col-md-12 mb-6">
+            Is your anonymity protected if you choose to take advantage of mental health or substance abuse treatment
+            resources? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="anonymity" value="yes" checked>
+                <label class="form-check-label" for="anonymity">
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="anonymity" value="no">
+                <label class="form-check-label" for="anonymity">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="anonymity" value="maybe">
+                <label class="form-check-label" for="anonymity">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-8 mb-6">
+            How easy is it for you to take medical leave for a mental health condition? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="leave" value="Somewhat" checked>
+                <label class="form-check-label" for="leave">
+                    Somewhat
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="leave" value="Don't know">
+                <label class="form-check-label" for="leave">
+                    Don't know
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="leave" value=" Very easy">
+                <label class="form-check-label" for="leave">
+                    Very easy
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="leave" value=" Very difficult">
+                <label class="form-check-label" for="leave">
+                    Very difficult
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            Do you think that discussing a mental health issue with your employer would have negative consequences? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mental_health_consequence" value="yes" checked>
+                <label class="form-check-label" for="mental_health_consequence">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mental_health_consequence" value="no">
+                <label class="form-check-label" for="mental_health_consequence">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mental_health_consequence" value="maybe">
+                <label class="form-check-label" for="mental_health_consequence">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            Do you think that discussing a physical health issue with your employer would have negative consequences?
+            <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="phys_health_consequence" value="yes" checked>
+                <label class="form-check-label" for="phys_health_consequence">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="phys_health_consequence" value="no">
+                <label class="form-check-label" for="phys_health_consequence">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="phys_health_consequence" value="maybe">
+                <label class="form-check-label" for="phys_health_consequence">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            Would you be willing to discuss a mental health issue with your coworkers? <br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="coworkers" value="yes" checked>
+                <label class="form-check-label" for="coworkers">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="coworkers" value="no">
+                <label class="form-check-label" for="coworkers">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="coworkers" value="maybe">
+                <label class="form-check-label" for="coworkers">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-12">
+            Would you be willing to discuss a mental health issue with your direct supervisor(s)?<br>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="supervisor" value="yes" checked>
+                <label class="form-check-label" for="supervisor">
+                    Yes
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="supervisor" value="no">
+                <label class="form-check-label" for="coworkerssupervisor">
+                    No
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="supervisor" value="maybe">
+                <label class="form-check-label" for="supervisor">
+                    Maybe
+                </label>
+            </div>
+        </div>
+        <br>
+        <small>Click next to continue</small>
+        <div class="form-group row next">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-success"><a href="/form2" id="changeColor">Previous</a></button>
+               <button type="submit" class="btn btn-success"><a href="/form4" onclick="document.getElementById('form3').submit(); id="changeColor"">Next</a></button>
+            </div>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
